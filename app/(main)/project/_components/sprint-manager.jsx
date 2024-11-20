@@ -32,7 +32,6 @@ export default function SprintManager({
   const {
     fn: updateStatus,
     loading,
-    error,
     data: updatedStatus,
   } = useFetch(updateSprintStatus);
 
@@ -58,7 +57,7 @@ export default function SprintManager({
       });
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-  }, [updatedStatus, loading]);
+  }, [updatedStatus, loading,setStatus,setSprint]);
 
   const getStatusText = () => {
     if (status === "COMPLETED") {
@@ -83,7 +82,7 @@ export default function SprintManager({
         // eslint-disable-next-line react-hooks/exhaustive-deps
       }
     }
-  }, [searchParams, sprints]);
+  }, [searchParams, sprints,setSprint,setStatus]);
 
   const handleSprintChange = (value) => {
     const selectedSprint = sprints.find((s) => s.id === value);
