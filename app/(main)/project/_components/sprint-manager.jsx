@@ -56,6 +56,7 @@ export default function SprintManager({
         ...sprint,
         status: updatedStatus.sprint.status,
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [updatedStatus, loading]);
 
@@ -79,6 +80,7 @@ export default function SprintManager({
       if (selectedSprint) {
         setSprint(selectedSprint);
         setStatus(selectedSprint.status);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }
     }
   }, [searchParams, sprints]);

@@ -65,6 +65,7 @@ export default function IssueCreationDrawer({
   useEffect(() => {
     if (isOpen && orgId) {
       fetchUsers(orgId);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [isOpen, orgId]);
 

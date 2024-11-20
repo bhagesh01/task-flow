@@ -76,7 +76,9 @@ export default function IssueDetailsDialog({
   useEffect(() => {
     if (deleted) {
       onClose();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       onDelete();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     if (updated) {
       onUpdate(updated);

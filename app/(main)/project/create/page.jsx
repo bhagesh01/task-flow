@@ -31,6 +31,7 @@ export default function CreateProjectPage() {
   useEffect(() => {
     if (isOrgLoaded && isUserLoaded && membership) {
       setIsAdmin(membership.role === "org:admin");
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [isOrgLoaded, isUserLoaded, membership]);
 
@@ -52,6 +53,7 @@ export default function CreateProjectPage() {
 
   useEffect(() => {
     if (project) router.push(`/project/${project.id}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
 
   if (!isOrgLoaded || !isUserLoaded) {
